@@ -21,7 +21,8 @@ class InitConf:
         self.calendar_name = name
 
     def ask_databases(self):
-        nb_calendar = int(input("How many databases would you like to sync ? "))
+        nb_calendar = int(
+            input("How many databases would you like to sync ? "))
         for i in range(nb_calendar):
             db_name = input("Enter your database name : ")
             db_name = db_name.replace(" ", "_")
@@ -56,9 +57,3 @@ if __name__ == '__main__':
     except Exception as e:
         print(e)
         sys.exit()
-
-
-
-
-
-

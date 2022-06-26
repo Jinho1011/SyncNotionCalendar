@@ -4,8 +4,8 @@ import os
 
 class InitCron:
     def __init__(self):
-        self.minutes = "0"
-        self.hours = "8-22"
+        self.minutes = "*"
+        self.hours = "*"
         self.days = "*"
         self.month = "*"
         self.years = "*"
@@ -14,7 +14,8 @@ class InitCron:
 
     def add_job(self):
         command = f"cd {os.getcwd()} && ./syncNotionCalendar.zsh"
-        existing_jobs = list(self.cron.find_comment("SyncNotionCalendar cron job"))
+        existing_jobs = list(self.cron.find_comment(
+            "SyncNotionCalendar cron job"))
         if len(existing_jobs) == 0:
             job = self.cron.new(
                 comment="SyncNotionCalendar cron job",
@@ -29,4 +30,3 @@ class InitCron:
 
 if __name__ == '__main__':
     InitCron().add_job()
-

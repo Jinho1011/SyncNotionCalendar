@@ -1,2 +1,2 @@
 #!/bin/zsh
-/opt/homebrew/bin/python3 /Users/sprietthibault/scripts/notion-ical/main.py
+/usr/local/bin/python3 /Users/jjh/Scripts/SyncNotionCalendar/main.py
