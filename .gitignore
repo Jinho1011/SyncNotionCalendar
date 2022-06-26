@@ -6,3 +6,5 @@ config.ini
 logs/*.log
 databases/*.csv
 databases_test
+*.ini
+*.zsh
